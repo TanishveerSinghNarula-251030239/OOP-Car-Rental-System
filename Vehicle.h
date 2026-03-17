@@ -13,7 +13,7 @@ protected:
 
 public:
     Vehicle();
-    void displayVehicle();
+    virtual void displayVehicle() = 0;
 };
 
 #endif

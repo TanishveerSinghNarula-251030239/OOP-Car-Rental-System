@@ -3,7 +3,7 @@
 
 #include<string>
 
-class Coustomer
+class Customer
 {
 protected:
 int customerId;

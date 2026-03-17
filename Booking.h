@@ -7,7 +7,10 @@
 
  class Booking : public Vehicle, public Customer
 {
-protected:
+private:
+Customer customer;
+Vehicle vehicle;
+
 int numberOfDays;
 double totalRent;
 std::string bookingDate;
@@ -16,8 +19,8 @@ std::string returnDate;
 public:
 Booking();
 
-void calculateRent;
-void displayBooking;
+void calculateRent();
+void displayBooking();
 
 
 };

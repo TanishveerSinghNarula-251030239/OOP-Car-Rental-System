@@ -14,11 +14,11 @@ void Booking::calculateRent()
     totalRent = rentPerDay * numberOfDays;
 }
 
-void Booking::displayBooking()
+void Booking::displayBooking(_)
 {
-    std::cout << "Customer Name: " << name << std::endl;
-    std::cout << "License Number: " << licenseNumber << std::endl;
-    std::cout << "Vehicle Model: " << model << std::endl;
+    customer.displayCustomer();
+    vehicle.displayVehicle();
+
     std::cout << "Days Rented: " << numberOfDays << std::endl;
     std::cout << "Booking Date: " << bookingDate << std::endl;
     std::cout << "Return Date: " << returnDate << std::endl;
