@@ -16,6 +16,10 @@ void Booking::calculateRent()
     totalRent = rentPerDay * numberOfDays;
 }
 
+void Booking::displayBooking()
+{
+}
+
 void Booking::displayBooking(_)
 {
     customer.displayCustomer();
