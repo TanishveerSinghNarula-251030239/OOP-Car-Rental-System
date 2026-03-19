@@ -9,7 +9,7 @@
 {
 private:
 Customer customer;
-Vehicle vehicle;
+Vehicle* vehicle;
 
 int numberOfDays;
 double totalRent;

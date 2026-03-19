@@ -1,8 +1,14 @@
 #include <iostream>
+#include"Car.h"
+
 using namespace std;
 
 int main()
 {
-    cout << "Car Rental System Project Started" << endl;
+    Vehicle* v1 = new Car();
+    v1->displayVehicle();
+
+    delete v1;
+
     return 0;
 }

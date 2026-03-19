@@ -1,15 +1,17 @@
+#include"Car.h"
 #include "Booking.h"
 #include <iostream>
 
 Booking::Booking()
 {
+    vehicle = new Car();
     numberOfDays = 0;
     totalRent = 0;
     bookingDate = "N/A";
     returnDate = "N/A";
 }
 
-void Booking::calculateRent()
+void Booking::calculateRent() 
 {
     totalRent = rentPerDay * numberOfDays;
 }
