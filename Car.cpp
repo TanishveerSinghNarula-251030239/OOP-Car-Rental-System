@@ -4,12 +4,12 @@
 Car::Car()
 {
     seats = 5;
-    model = "Default Car";
+    model = "Defautl cars";
     rentPerDay = 1000;
 }
 void Car::displayVehicle()
 {
-    std::cout << "Car Model: " << model << std::endl;
-    std::cout << "Seats: " << seats << std::endl;
-    std::cout << "Rent per Day: " << rentPerDay << std::endl;
+    std::cout << "car model: " << model << std::endl;
+    std::cout << "seats: " << seats << std::endl;
+    std::cout << "Rent per day: " << rentPerDay << std::endl;
 }

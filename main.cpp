@@ -5,7 +5,8 @@ using namespace std;
 
 int main()
 {
-    Vehicle* v1 = new Car();
+    Vehicle* v1 ;
+    v1->new car();
     v1->displayVehicle();
 
     delete v1;
