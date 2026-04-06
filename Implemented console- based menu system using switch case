@@ -1,0 +1,25 @@
+int main(){
+Rentalsystem system;
+int choice;
+do{
+cout<<"1.view cars"<<endl;
+cout<<"2.Rent car"<<endl;
+cout<<"3.Return car"<<endl;
+cout<<"4.Exit"<<endl;
+
+cin>>choice;
+switch(choice){
+case 1:
+  system.viewcars();
+  break;
+case 2:
+  system.rentcar();
+  break;
+case 3:
+  system.returncar();
+  break;
+   }
+
+} while(choice!=4);
+  return 0;
+}
