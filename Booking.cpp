@@ -20,10 +20,10 @@ void Booking::displayBooking()
 {
 }
 
-void Booking::displayBooking(_)
+void Booking::displayBooking()
 {
     customer.displayCustomer();
-    vehicle.displayVehicle();
+    vehicle->displayVehicle();
 
     std::cout << "Days Rented: " << numberOfDays << std::endl;
     std::cout << "Booking Date: " << bookingDate << std::endl;
