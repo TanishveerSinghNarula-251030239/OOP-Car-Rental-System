@@ -1,0 +1,11 @@
+void rentcar(customer &customer, car &car, int days){
+if(car.is available()){
+car.setavailable(false);
+double cost = car.getpriceperday()* days;
+cout<< "car rented successfully!" << end1;
+cout<< "customer"<< cuustomer.getname() <<end1;
+cout<< "total cost:"<< cost << end1;
+} else{
+cout <<" car is not available."<< end1;
+}
+}
