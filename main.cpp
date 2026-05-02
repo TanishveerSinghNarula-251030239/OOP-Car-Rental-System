@@ -5,7 +5,8 @@ using namespace std;
 
 int main()
 {
-    Vehicle* v1 = new Car();
+    RentalSystem system;
+    system.menu();
     v1->displayVehicle();
 
     delete v1;

@@ -14,6 +14,10 @@ protected:
 public:
     Vehicle();
     virtual void displayVehicle() = 0;
+
+    double getRentPerDay();
+bool isAvailable();
+void setAvailability(bool status);
 };
 
 #endif

@@ -5,7 +5,7 @@
 #include"Customer.h"
 #include<string>
 
- class Booking : public Vehicle, public Customer
+ class Booking 
 {
 private:
 Customer customer;
