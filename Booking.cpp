@@ -1,10 +1,9 @@
-#include"Car.h"
 #include "Booking.h"
 #include <iostream>
 
 Booking::Booking()
 {
-    vehicle = new Car();
+    vehicle = nullptr;
     numberOfDays = 0;
     totalRent = 0;
     bookingDate = "N/A";
@@ -38,18 +37,19 @@ return vehicle;
 }
 
 void Booking::calculateRent() 
-{
-    totalRent = vehicle->getRentPerDay() * numberOfDays;
+{ 
+    if(vehicle!=nullptr)
+    {
+        totalRent = vehicle->getRentPerDay() * numberOfDays;
+    }
 }
-
-void Booking::displayBooking()
-{
-}
-
 void Booking::displayBooking()
 {
     customer.displayCustomer();
-    vehicle->displayVehicle();
+    if(vehicle!=nullptr)
+    {
+        vehicle->displayVehicle();
+    }
 
     std::cout << "Days Rented: " << numberOfDays << std::endl;
     std::cout << "Booking Date: " << bookingDate << std::endl;
