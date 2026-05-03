@@ -14,3 +14,17 @@ std::cout<<"Model: "<<model<<std::endl;
 std::cout<<"Rent Per Day: "<<rentPerDay<<std::endl;
 std::cout<<"Available: "<< (available ? "Yes" : "No" ) << std::endl;
 }
+double Vehicle::getRentPerDay()
+{
+    return rentPerDay;
+}
+
+bool Vehicle::isAvailable()
+{
+    return available;
+}
+
+void Vehicle::setAvailability(bool status)
+{
+    available = status;
+}

@@ -13,7 +13,7 @@ Booking::Booking()
 
 void Booking::calculateRent() 
 {
-    totalRent = rentPerDay * numberOfDays;
+    totalRent = vehicle->getRentPerDay() * numberOfDays;
 }
 
 void Booking::displayBooking()
