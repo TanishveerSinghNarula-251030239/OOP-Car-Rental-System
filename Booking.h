@@ -18,9 +18,17 @@ std::string returnDate;
  
 public:
 Booking();
+ 
+void setVehicle(Vehicle* v);
+void setCustomer(Customer c);
+void setDays(int d);
+void setDates(std::string bDate,std::string rDate);
+Vehicle* getVehicle();
+
 
 void calculateRent();
 void displayBooking();
+
 
 
 };
