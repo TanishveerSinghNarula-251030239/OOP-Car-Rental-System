@@ -1,12 +1,24 @@
 #include "Customer.h"
 #include <iostream>
 
+int Customer::nextId=0;
+
 Customer::Customer()
 {
-    customerId = 0;
+    customerId = ++nextId;
     name = "Unknown";
     phoneNumber = "N/A";
     licenseNumber = "N/A";
+}
+void Customer::inputCustomer()
+{
+std::cin.ignore();
+std::cout<<"Enter Name: ";
+std::getline(std::cin,name);
+std::cout<<"Enter Phone Number: ";
+std::getline(std::cin,phoneNumber);
+std::cout<<"Enter License Number: ";
+std::getline(std::cin,licenseNumber);
 }
 
 void Customer::displayCustomer()

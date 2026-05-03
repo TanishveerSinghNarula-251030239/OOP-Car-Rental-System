@@ -15,6 +15,7 @@ int numberOfDays;
 double totalRent;
 std::string bookingDate;
 std::string returnDate;
+static int nextId;
  
 public:
 Booking();

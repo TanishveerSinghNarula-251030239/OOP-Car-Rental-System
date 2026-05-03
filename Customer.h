@@ -10,9 +10,11 @@ int customerId;
 std::string name;
 std::string phoneNumber;
 std::string licenseNumber;
+static int nextId;
 
 public:
 Customer();
+void inputCustomer();
 void displayCustomer();
 
 };
