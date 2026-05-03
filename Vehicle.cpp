@@ -1,19 +1,17 @@
 #include"Vehicle.h"
 #include <iostream>
+
+int Vehicle::nextId = 0;
+
 Vehicle::Vehicle()
 {
-    vehicleId= 0;
+    vehicleId=++nextId;
     model="unknown";
     rentPerDay= 0;
     available= true;   
 }
-void Vehicle::displayVehicle()
-{
-std::cout << "Vehicle ID:" <<  vehicleId << std::endl;
-std::cout<<"Model: "<<model<<std::endl;
-std::cout<<"Rent Per Day: "<<rentPerDay<<std::endl;
-std::cout<<"Available: "<< (available ? "Yes" : "No" ) << std::endl;
-}
+
+
 double Vehicle::getRentPerDay()
 {
     return rentPerDay;
@@ -27,4 +25,14 @@ bool Vehicle::isAvailable()
 void Vehicle::setAvailability(bool status)
 {
     available = status;
+}
+
+int Vehicle::getId()
+{
+    return vehicleId;
+}
+
+std::string Vehicle::getModel()
+{
+    return model;
 }

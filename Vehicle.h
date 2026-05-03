@@ -10,7 +10,7 @@ protected:
     std::string model;
     double rentPerDay;
     bool available;
-
+    static int nextId;
 public:
     Vehicle();
     virtual void displayVehicle() = 0;
@@ -18,6 +18,9 @@ public:
     double getRentPerDay();
 bool isAvailable();
 void setAvailability(bool status);
+int getId();
+std::string getModel();
+static int getNextId();
 };
 
 #endif
