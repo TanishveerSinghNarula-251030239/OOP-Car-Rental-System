@@ -24,20 +24,20 @@ void RentalSystem::viewCars()
         vehicles[i]->displayVehicle();
     }
 }
-Vehicle* RentalSystem::findAvailableCar()
+void RentalSystem::searchAvailableCar()
 {
     for (auto v : vehicles)
     {
         if (v->isAvailable())
         {
-            return v;
+            v->displayVehicle();
         }
     }
-    return nullptr;
 }
 void RentalSystem::rentCar()
 {
-    Vehicle* car = findAvailableCar();
+    Vehicle* car = nullptr;
+    searchAvailableCar();
 
     if (car == nullptr)
     {

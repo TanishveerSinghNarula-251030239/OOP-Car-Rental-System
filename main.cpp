@@ -1,5 +1,5 @@
 #include <iostream>
-#include"Car.h"
+#include"RentalSystem.h"
 
 using namespace std;
 
@@ -7,9 +7,6 @@ int main()
 {
     RentalSystem system;
     system.menu();
-    v1->displayVehicle();
-
-    delete v1;
 
     return 0;
 }

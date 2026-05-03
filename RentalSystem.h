@@ -19,7 +19,8 @@ public:
     void viewCars();
     void rentCar();
     void returnCar();
-    Vehicle* findAvailableCar();
+    void searchAvailableCar();
+    void deleteCar();
     void displayAllBookings();
     void menu();
     ~RentalSystem();
