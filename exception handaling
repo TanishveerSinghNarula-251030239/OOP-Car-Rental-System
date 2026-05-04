@@ -1,0 +1,107 @@
+#include <iostream>
+#include <vector>
+#include <stdexcept> 
+using namespace std;
+
+class Car {
+private:
+    int id;
+    string name;
+    bool isAvailable;
+
+public:
+    Car(int id, string name) {
+        this->id = id;
+        this->name = name;
+        this->isAvailable = true;
+    }
+
+    int getId() { return id; }
+    string getName() { return name; }
+    bool available() { return isAvailable; }
+
+    void rent() {
+        if (!isAvailable) {
+            throw runtime_error("Car is already rented!");
+        }
+        isAvailable = false;
+    }
+
+    void returnCar() {
+        if (isAvailable) {
+            throw runtime_error("Car was not rented!");
+        }
+        isAvailable = true;
+    }
+};
+
+class CarRentalSystem {
+private:
+    vector<Car> cars;
+
+public:
+    void addCar(int id, string name) {
+        cars.push_back(Car(id, name));
+    }
+
+    void rentCar(int id) {
+        try {
+            bool found = false;
+
+            for (auto &car : cars) {
+                if (car.getId() == id) {
+                    found = true;
+                    car.rent(); 
+                    cout << "Car rented successfully!\n";
+                    return;
+                }
+            }
+
+            if (!found) {
+                throw runtime_error("Car ID not found!");
+            }
+
+        } catch (exception &e) {
+            cout << "Error: " << e.what() << endl;
+        }
+    }
+
+    void returnCar(int id) {
+        try {
+            bool found = false;
+
+            for (auto &car : cars) {
+                if (car.getId() == id) {
+                    found = true;
+                    car.returnCar(); // may throw exception
+                    cout << "Car returned successfully!\n";
+                    return;
+                }
+            }
+
+            if (!found) {
+                throw runtime_error("Car ID not found!");
+            }
+
+        } catch (exception &e) {
+            cout << "Error: " << e.what() << endl;
+        }
+    }
+};
+
+int main() {
+    CarRentalSystem system;
+
+    system.addCar(1, "Swift");
+    system.addCar(2, "Fortuner");
+
+    system.rentCar(1);   // success
+    system.rentCar(1);   // exception (already rented)
+
+    system.returnCar(1); // success
+    system.returnCar(1); // exception (not rented)
+
+    system.rentCar(5);   // exception (not found)
+
+    return 0;
+}
