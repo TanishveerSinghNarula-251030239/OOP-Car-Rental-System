@@ -1,0 +1,46 @@
+#include <iostream>
+using namespace std;
+
+class Vehicle {
+protected:
+    int vehicleId;
+    string model;
+    string brand;
+    double rentPerDay;
+    bool isAvailable;
+
+public:
+    Vehicle(int id, string m, string b, double rent) {
+        vehicleId = id;
+        model = m;
+        brand = b;
+        rentPerDay = rent;
+        isAvailable = true;
+    }
+
+    int getVehicleId() { return vehicleId; }
+    string getModel() { return model; }
+    string getBrand() { return brand; }
+    double getRentPerDay() { return rentPerDay; }
+    bool getAvailability() { return isAvailable; }
+
+    void rent() {
+        if (!isAvailable) {
+            throw runtime_error("Vehicle not available!");
+        }
+        isAvailable = false;
+    }
+
+    void returnVehicle() {
+        isAvailable = true;
+    }
+
+    virtual void displayDetails() {
+        cout << "ID: " << vehicleId
+             << " | Brand: " << brand
+             << " | Model: " << model
+             << " | Rent/Day: " << rentPerDay
+             << " | Available: " << (isAvailable ? "Yes" : "No")
+             << endl;
+}
+};
