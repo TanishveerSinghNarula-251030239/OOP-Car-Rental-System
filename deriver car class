@@ -1,0 +1,15 @@
+class Car : public Vehicle {
+private:
+    int numberOfSeats;
+
+public:
+    Car(int id, string m, string b, double rent, int seats)
+        : Vehicle(id, m, b, rent) {
+        numberOfSeats = seats;
+    }
+
+    void displayDetails() override {
+        Vehicle::displayDetails();
+        cout << "Seats: " << numberOfSeats << endl;
+    }
+};
